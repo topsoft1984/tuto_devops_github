@@ -8,6 +8,7 @@ jobs:
       - name: Check script
         run: test -e run.sh
   shellcheck:
+    if: github.actor = 'jeanparpaillon'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
