@@ -1,12 +1,13 @@
-name: 'Hello World'
-description: 'Greet someone'
+name: 'Container'
+description: 'test action compositee'
 inputs:
-    who-to-greet:  # id of input
-    description: 'Who to greet'
+   github_token:
+    description: 'The GitHub token to use'
     required: true
-    default: 'World'
 runs:
-- uses: actions/checkout@v2
+  using: "composite"
+  steps:
+      - uses: actions/checkout@v2
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
