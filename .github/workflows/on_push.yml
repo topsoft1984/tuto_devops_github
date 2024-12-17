@@ -1,0 +1,9 @@
+name: Check sources
+on: push
+jobs:
+  testscript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check script
+        run: test -e run.sh
