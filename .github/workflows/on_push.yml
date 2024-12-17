@@ -45,4 +45,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/jeanparpaillon/tuto_test:latest
+          tags: 
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
