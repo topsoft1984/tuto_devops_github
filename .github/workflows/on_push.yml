@@ -29,6 +29,12 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           build_dir: ./dist
-          target_branch: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
