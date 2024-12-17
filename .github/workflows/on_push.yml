@@ -7,3 +7,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Check script
         run: test -e run.sh
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Shellcheck
+        uses: ludeeus/action-shellcheck@vmaster
