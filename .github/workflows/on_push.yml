@@ -45,4 +45,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/tuto_test:latest
+          tags: ghcr.io/jeanparpaillon/tuto_test:latest
