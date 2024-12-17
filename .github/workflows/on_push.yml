@@ -34,6 +34,7 @@ jobs:
   container:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: docker/build-push-action@v2
         with:
           context: .
