@@ -2,4 +2,4 @@
 
 basedir=$(dirname "$0")
 
-test "$("$basedir"/../run.sh)" = "Hello world" && echo "Test passed!"
+test "$("$basedir"/../run.sh)" = "Hello world!" && echo "Test passed!"
