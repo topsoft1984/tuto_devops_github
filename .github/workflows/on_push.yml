@@ -8,7 +8,7 @@ jobs:
       - name: Check script
         run: test -e run.sh
   shellcheck:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Run Shellcheck
